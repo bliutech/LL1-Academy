@@ -26,9 +26,18 @@ for i in range(num_grammars):
     print(terminals)
     g = generate_grammar(nonTerminals, terminals)
     gc = GrammarChecker()
-    firstSets, followSets, parsingTable, status, reachable, terminals = gc.solve(g, nonTerminals[0], False)
+    firstSets, followSets, parsingTable, status, reachable, terminals = gc.solve(g, "A", False)
+    print("Start symbol:", nonTerminals[0])
     print("First sets:", firstSets)
+    filteredFirstSets = {}
+    for key, value in firstSets.items():
+        filteredFirstSets[key] = [x for x in value if x in terminals]
+    print("First sets (filtered):", filteredFirstSets)
     print("Follow sets:", followSets)
+    filteredFollowSet = {}
+    for key, value in followSets.items():
+        filteredFollowSet[key] = [x for x in value if x in terminals]
+    print("Follow sets (filtered):", filteredFollowSet)
     print("Parsing table:", parsingTable)
     print("Is LL(1):", "yes" if status == 0 else "no" if status == 1 else "left recursion")
     print("Reachable:", reachable)
