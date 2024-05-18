@@ -56,7 +56,7 @@ def practice(request):
 	prods = ast.literal_eval(grammar_obj.prods)
 	
 	grammar_object = []
-	for nt in non_terminals:
+	for nt in sorted(non_terminals):
 		grammar_object.append({"nt": nt, "productions": prods[nt]})
 
 	#stringify terminals + non_terminals
