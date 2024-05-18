@@ -1,3 +1,18 @@
+/* UI fix overriding the .pretty class */
+.pretty > input[type='checkbox'] {
+	opacity: 1 !important;
+	width: 1rem !important;
+	height: 1rem !important;
+	margin-top: 0.5rem !important;
+}
+
+[type=checkbox]+label[for],
+[type=radio]+label[for] {
+	cursor: pointer;
+	margin-left: 1.5rem;
+	font-size: 1rem;
+}
+
 /* General styling */
 body {
 	font-family: 'Lato', sans-serif;
