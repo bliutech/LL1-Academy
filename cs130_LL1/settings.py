@@ -25,7 +25,7 @@ SECRET_KEY = 'sc**kkwq+#zb)s-0duj-k-j^92l-cj6x^7*-*eyba#6+obwftf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost',"127.0.0.1", "ll1academy.com"]
+ALLOWED_HOSTS = ['localhost',"127.0.0.1", "ll1academy.com", "ao.bliu.tech"]
 
 
 # Application definition
