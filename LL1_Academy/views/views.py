@@ -6,7 +6,7 @@ def index(request):
 def about(request):
 	return render(request, 'LL1_Academy/about.html')
 
-def handler404(request):
+def handler404(request, exception):
 	context = {}
 	context['title'] = "Oops, page not found."
 	context['text'] = "We searched everywhere but could not find the page."
@@ -22,7 +22,7 @@ def handler500(request):
 	response.status_code = 500
 	return response
 
-def handler400(request):
+def handler400(request, exception):
 	context = {}
 	context['title'] = "Oops, bad request."
 	context['text'] = "Please do not attempt to mess with our API."

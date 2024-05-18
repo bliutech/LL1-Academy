@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url,include
+from django.urls import include, re_path
 from django.contrib import admin
 
 import LL1_Academy.views.practice as practice
@@ -24,21 +24,21 @@ import LL1_Academy.views.userProfile as user_profile
 
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', views.index),
-    url(r'^index$', views.index),
-    url(r'^about$', views.about),
-    url(r'^practice', practice.practice),
-    url(r'^tutorial$', tutorial.tutorial),
-    url(r'^get_question$', practice.get_question),
-    url(r'^check_answer$', practice.check_answer),
-    url(r'^give_up$', practice.give_up),
-    url(r'^log_skip_grammar$', stats.log_skip_grammar),
-    url(r'^profile$', user_profile.profile),
-    url(r'^accounts/disconnect_account$', user_profile.disconnect_account),
-    url(r'^accounts/social/connections/$', user_profile.profile),
-    url(r'^accounts/social/signup/$', user_profile.login_duplicate),
-    url(r'^accounts/', include('allauth.urls')),
+    re_path(r'^admin/', admin.site.urls),
+    re_path(r'^$', views.index),
+    re_path(r'^index$', views.index),
+    re_path(r'^about$', views.about),
+    re_path(r'^practice', practice.practice),
+    re_path(r'^tutorial$', tutorial.tutorial),
+    re_path(r'^get_question$', practice.get_question),
+    re_path(r'^check_answer$', practice.check_answer),
+    re_path(r'^give_up$', practice.give_up),
+    re_path(r'^log_skip_grammar$', stats.log_skip_grammar),
+    re_path(r'^profile$', user_profile.profile),
+    re_path(r'^accounts/disconnect_account$', user_profile.disconnect_account),
+    re_path(r'^accounts/social/connections/$', user_profile.profile),
+    re_path(r'^accounts/social/signup/$', user_profile.login_duplicate),
+    re_path(r'^accounts/', include('allauth.urls')),
 ]
 
 handler404='LL1_Academy.views.views.handler404'

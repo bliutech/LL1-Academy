@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/H-Huang/LL1-Academy.svg?branch=master)](https://travis-ci.org/H-Huang/LL1-Academy) [![GitHub releases](https://img.shields.io/badge/releases-4-brightgreen.svg)](https://github.com/H-Huang/LL1-Academy/releases) [![GitHub issues](https://img.shields.io/github/issues/H-Huang/LL1-Academy.svg)](https://github.com/H-Huang/LL1-Academy/issues) [![GitHub stars](https://img.shields.io/github/stars/H-Huang/LL1-Academy.svg)](https://github.com/H-Huang/LL1-Academy/stargazers) [![GitHub forks](https://img.shields.io/github/forks/H-Huang/LL1-Academy.svg)](https://github.com/H-Huang/LL1-Academy/network) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/H-Huang/LL1-Academy/master/LICENSE)
 # LL1-Academy
+[WIP] My fork of LL1-Academy since ll1academy.cs.ucla.edu went offline.
 
 ### Team :fire: :
 | Julien Brundrett | Howard Huang | Vincent Siu | Elise Yuen | Vivian (Ni) Zhang |
@@ -14,7 +15,7 @@ The LL(1) Academy web application is intended to be used as a resource for stude
 
 ### If you have docker + docker-compose installed locally:
 
-    docker-compose up
+    docker-compose build && docker-compose up
 
 ### Otherwise download Vagrant and VirtualBox 5.1.18
 
