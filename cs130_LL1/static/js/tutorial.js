@@ -282,7 +282,6 @@ function get_pt_chars(obj){
 						+'<input type="checkbox" '+ checked +
 						' onchange="click_pt_button(this)" value='
 						+line.productions[j]+'><label>'
-						+'<i class="im im-check-mark"></i>'
 						+ line.productions[j] +'</label></div>';
 				buttons += cb;
 			}

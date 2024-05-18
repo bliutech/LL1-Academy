@@ -7,10 +7,11 @@
 }
 
 [type=checkbox]+label[for],
-[type=radio]+label[for] {
+[type=radio]+label[for],
+label {
 	cursor: pointer;
-	margin-left: 1.5rem;
-	font-size: 1rem;
+	margin-left: 1.5rem !important;
+	font-size: 1rem !important;
 }
 
 /* General styling */
