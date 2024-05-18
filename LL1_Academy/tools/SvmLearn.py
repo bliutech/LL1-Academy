@@ -100,9 +100,9 @@ class SvmLearn:
         # Input: grammar, first and follow as the grammar checker returns (refer to that for format)
         # Output: an array of integers representing the features
         if not (isinstance(grammar,dict) and isinstance(first,dict) and isinstance(follow,dict)):
-            raise Exception('Wrong format of grammar input')
+            raise Exception('Wrong format of grammar input' + str(grammar) + str(first) + str(follow))
         if not (len(grammar)==self.nVariable and len(first)==self.nVariable and len(follow)==self.nVariable):
-            raise Exception('Wrong format of grammar input')
+            raise Exception('Wrong format of grammar input' + str(grammar) + str(first) + str(follow) + str(self.nVariable) + str(len(grammar)) + str(len(first)) + str(len(follow)))
 
         result = []
 
